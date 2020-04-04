@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce</title>
+</head>
+<body>
+    <script>
+        let arr=[12,56,87,95,64];
+        /*let result=arr.reduce(function(tmp,item,index){
+            //alert(index+":"+tmp+","+item);
+            return tmp+item;
+        })
+        alert(result/arr.length)*/
+        let result=arr.reduce(function(tmp,item,index){
+            if(index==arr.length-1){
+                return (tmp+item)/arr.length;
+            }else{
+                return tmp+item;
+            }
+        })
+        alert(result)
+    </script>
+</body>
+</html>

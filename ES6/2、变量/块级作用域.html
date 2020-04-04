@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级作用域</title>
+    <script>
+        /*window.onload = function(){
+            let btn = document.getElementsByTagName('input');
+            for(var i=0;i<btn.length;i++){
+                btn[i].onclick=function(){
+                    alert(i);
+                }
+            }
+        }*/
+
+        /*window.onload = function(){
+            let btn = document.getElementsByTagName('input');
+            for(var i=0;i<btn.length;i++){
+                (function(i){
+                    btn[i].onclick=function(){
+                        alert(i);
+                    };
+                })(i);
+            }
+        }*/
+
+        window.onload = function(){
+            let btn = document.getElementsByTagName('input');
+            for(let i=0;i<btn.length;i++){
+                btn[i].onclick=function(){
+                    alert(i);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="a">
+    <input type="button" value="b">
+    <input type="button" value="c">
+</body>
+</html>

@@ -1,0 +1,47 @@
+面向对象
+    语言发展：
+        机器语言->汇编语言->低级语言（面向过程）->高级语言（面向对象）->模块系统->框架->系统接口（API）
+
+    封装
+        ES5面向对象（假的）
+            没有统一的写法
+        ES6面向对象（假的）
+            统一的写法
+    继承：
+        1、省事
+        2、便于扩展
+
+    ES6新加：
+        class           类声明
+        constructor     构造函数
+        extends         继承
+        super           父类/超类
+---------------------------------------------------------------------------------
+
+模块系统
+    1、定义
+
+    2、使用
+        1、导出（export）
+            //变量
+            export let a=1;
+            //函数
+            export function show(){
+                ......
+            }
+            //类
+            export calss Person{
+                .......
+            }
+            //默认成员
+            export default
+        2、导入
+            import * as model from xxx          引入所有成员
+            import model from xxx               引入default成员
+            import {a,b as name} from xxx
+            //只引入，不使用
+            import 'xxx'
+            //异步引入
+            let p=import(xxxx)
+        3、webpack编译
+

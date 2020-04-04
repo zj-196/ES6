@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <script>
+        let p = new Promise(function(resolve,reject){
+            $.ajax({
+                url:'data/1.txt',
+                dataType:'json',
+                success(arr){
+                    resolve(arr);
+                },
+                error(res){
+                    reject(res);
+                }
+            })
+        });
+        p.then(function(arr){
+            alert("成功");
+            console.log(arr);
+        },function(res){
+            alert("失败");
+            console.log(res);
+        });
+    </script>
+</body>
+</html>

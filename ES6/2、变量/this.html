@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <script>
+        /*let json={
+            a:12,
+            fn:function(){
+                console.log(this);
+                alert(this.a);
+            }
+        };
+        json.fn();
+
+        let date = new Date();
+        date.fn = json.fn;
+        date.fn();*/
+
+        class Json{
+            constructor(){
+                console.log(this);
+                this.a = 12;
+                this.fn=()=>{
+                    console.log(this);
+                    alert(this.a);
+                }
+            }
+        }
+        let json = new Json();
+        //json.fn();
+        let date = new Date();
+        date.fn = json.fn;
+        date.fn();
+    </script>
+</body>
+</html>

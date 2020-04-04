@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6对象写法</title>
+</head>
+<body>
+    <script>
+        //单独构造函数和类的声明
+        class Person{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            showName(){
+                alert(this.name);
+            }
+            showAge(){
+                alert(this.age);
+            }
+        }
+        //let p = new Person("Tom",20)
+        //p.showAge();
+        //p.showName();
+
+        class Worker extends Person{
+            constructor(name,age,job){
+                super(name,age);
+                this.job=job;
+            }
+            showJob(){
+                alert(this.job)
+            }
+        }
+        let w = new Worker("Tom",20,"程序员")
+        w.showAge();
+        w.showName();
+        w.showJob();
+    </script>
+</body>
+</html>

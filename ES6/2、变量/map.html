@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <script>
+        let arr1=[60,70,50,40];
+        /*let arr2=arr1.map(function(item){
+            if(item>=60){
+                return "及格";
+            }else{
+                return "不及格";
+            }
+        })*/
+        /*let arr2=arr1.map(function(item){
+            return item>=60?"及格":"不及格";
+        })*/
+        let arr2=arr1.map(item=>item>=60?"及格":"不及格");
+        console.log(arr1);
+        console.log(arr2);
+    </script>
+</body>
+</html>

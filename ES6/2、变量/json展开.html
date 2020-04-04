@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json展开</title>
+</head>
+<body>
+    <script>
+        let json1={a:1,b:2};
+        //alert(json);
+        let json2={
+            ...json1,
+            c:3
+        }
+        console.log(json2);
+    </script>
+</body>
+</html>

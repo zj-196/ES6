@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES5对象写法</title>
+</head>
+<body>
+    <script>
+        //以函数的形式写对象
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        //添加方法
+        Person.prototype.showName=function(){
+            alert(this.name);
+        }
+        Person.prototype.showAge=function(){
+            alert(this.age);
+        }
+        //let p = new Person("Tom",20)
+        //p.showAge();
+        //p.showName();
+
+        function Worker(name,age,job){
+            Person.call(this,name,age);
+            this.job=job;
+        }
+        Worker.prototype=new Person();
+        Worker.prototype.constructor=Worker;
+        Worker.prototype.showJob=function(){
+            alert(this.job)
+        }
+
+        let w = new Worker("Tom",20,"程序员")
+        w.showAge();
+        w.showName();
+        w.showJob();
+    </script>
+</body>
+</html>
